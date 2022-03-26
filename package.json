@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "nodemon": "2.0.15"
+  },
   "scripts": {
     "start": "nodemon index.js"
   },

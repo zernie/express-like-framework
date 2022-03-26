@@ -5,4 +5,5 @@ module.exports = (req, res, next) => {
         });
         res.end(JSON.stringify(data));
     }
+    next();
 }

@@ -13,15 +13,15 @@ const users = [
     }
 ];
 
-router.get("/users", (req, res) => {
-    console.log("Hello from get /users");
+router.get("/users",  (req, res) => {
+    const user = req.body;
+    res.send(user);
 });
 
-router.post("/users", async (req, res) => {
-    const user = await req.body;
-    console.log(user, "user")
-    users.push(user);
-    res.send(users);
+router.post("/users",  (req, res, next) => {
+    const user = req.body;
+    res.send(user);
+    next()
 });
 
 router.get("/posts", (req, res) => {
